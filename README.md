@@ -8,4 +8,21 @@ But what if we want that old documentation again for some work, but unfortunatel
 <br>
 In such cases, use of a __Intelligent document finder__ can really make a huge difference. As, it can Search for the document(```sematically```) of your need based on a query input. This will not only help in faster access to the document, but will also help in grouping similar documents together and in analysing them.
 <br>
+# Technologies Used
+**```Python3.6```**
+__```JavaScript```__
+__```HTML/CSS```__
+<br>
+<h4>Database Used:</h4>
+ SQlite
+<br>
+<h4>For implementing searching:</h4>
+ Various NLP(Natural Language Processing) techniques is used.
+<br>
+<h4>For website(Local Host):</h4>
+
+- Python-based Web framework : Flask
+- JavaScript/JQuery
+
+# Program Flow
 
