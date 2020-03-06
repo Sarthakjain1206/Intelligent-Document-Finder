@@ -1,0 +1,223 @@
+body{
+    height: auto;
+    border: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+
+}
+
+.upper_container{
+    width: 90%;
+    height: 7vh;
+    background-color: ;
+    margin: 0 auto;
+    padding: 2vh 0.5vw;
+}
+.upper_conatiner_p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.4vh;
+    font-weight: 300;
+    width: auto;
+    background-color: ;
+}
+.upper_conatiner_p_top{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.4vh;
+    font-weight: 300;
+    width: auto;
+    padding-top: 0vh;
+    padding-left: 5vw;
+    background-color: ;
+}
+.upper_conatiner_p > b{
+    color: #1c73d6;
+}
+.upper_conatiner_p_top > b{
+    color: #1c73d6;
+}
+.upper_conatiner_p:hover > b{
+    color: #1c73d6;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+.output_outer_container{
+    height: auto;
+    width: 100%;
+}
+.output_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+.output{
+    width: 85%;
+    height: auto;
+    background-color: #f7f7f7;
+    padding: 4vh 3vw;
+    border-radius: 0.3rem;
+    border: 0.5px solid #e4e4e4;
+    display: grid;
+    grid-template-columns: 5% 65% 30%;
+    grid-gap: 2%;
+}
+.output:hover{
+    transition: 0.3s;
+}
+.file_extension_ico{
+    background-color: ;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.img_holder{
+    background-color: ;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.file_extension_ico > .img_holder > img{
+    height: 6.5vh;
+    width: 6.5vh;
+    margin: 0 auto;
+    background-color: ;
+    padding: 1vh 1vh;
+}
+
+.text{
+    display: grid;
+    grid-gap: 0vh;
+}
+.heading{
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    height: auto;
+    font-weight: 300;
+    padding: 1vh 0vw;
+    font-size: 2.25vh;
+}
+.heading:hover{
+    color: #222222;
+    transition: 0.2s;
+    text-decoration: underline;
+}
+.original_text{
+    font-size: 2vh;
+    color: #333333;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    
+    height: auto;
+    width: 90%;
+    padding: 1vh 0.5vw;
+}
+.tags{
+    font-size: 2.25vh;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    
+    font-weight: 300;
+    height: auto;
+    width: 90%;
+    padding: 1vh 0.5vw;
+}
+
+.summary{
+    padding: 0vh 2vw;
+    color: #333333;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    border-left: 1px solid #c4c4c4;
+    font-weight: 300;
+}
+.summary:hover{
+    color: #000000;
+    transition: 0.2s;
+}
+
+.tag_container{
+    display: grid;
+    grid-template-columns:  8% auto;
+}
+.the_tag > li{
+    list-style: none;
+    background-color: #fff388ad;
+    padding: 1vh 2vh;
+    margin-top: 0.5vh;
+    margin-right: 0.5vw;
+    border-radius: 0.3rem;
+    border: 0.5px solid #ffee53;
+    font-weight: 300;
+}
+.the_tag > li:hover{
+    border: 0.5px solid #f1df36;
+    background-color: #ffe25f;
+    transition: 0.3s;
+    color: #1a1a1a;
+}
+.the_tag{
+    display: inline-block;
+}
+/* footer starts */
+
+.footer{
+    height: 70vh;
+    width: 100%;
+    background-color: #1C272B;
+                                /* changes */
+    
+}
+.footer_1{
+    height: 50vh;
+    width: 75%;
+    border-bottom: 0.5px solid #a3a3a3;
+    margin: 0 auto;
+}
+
+.footer_social_media{
+    height: auto;
+    width: auto;
+    display: grid;
+    margin-left: 11vw;
+    place-items: left;
+}
+.footer_social_media > ul > li{
+    display: inline-block;
+    float: left;
+    color: #eeeeee;
+    font-size: 14px;
+    font-family: "Open Sans","Segoe UI",Tahoma,sans-serif;
+    font-weight: 300;
+}
+.footer_social_media > ul > li > a{
+    text-decoration: none;
+    font-size: 5px;
+}
+.footer_social_media > ul > li > a > img{
+    height: 4vh;
+    width: 4vh;
+    color: #ffffff;
+    padding: 0vh 0.9vw;
+}
+/* footer ends */
+
+
+.myclassname{
+    border: none;
+    background-color: #f7f7f7;
+    font-size: 2.3vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
+.myclassname:hover{
+    text-decoration: underline;
+    color: #4e74ba;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.thehiddenforminput{
+    display: none;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intelligent Document Finder</title>
+    <link rel="icon" type="image/ico" href="{{url_for('static' , filename = 'icons/loupe.svg')}}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'style.css') }}">
+    
+</head>
+
+<body onreload="mainfunction()">
+
+    <div id="gif_holder_id" class="gif_holder_id" style="display: none;height: 100vh; background-color: #ffffff;">
+        <div style="height: 40vh;"></div>
+        <div class="outer_gif_container">
+            <div class="gif_container">
+                <img src="{{ url_for('static', filename = 'icons/362.gif') }}" alt="" srcset="">
+            </div>
+        </div>
+        <div class="text_for_gif_container">
+            Please wait... file is uploading :)
+        </div>
+
+    </div>
+
+
+
+    <div class="complete_container" id="complete_container">
+
+
+    <!-- front_body starts -->
+        <div class="front_body" id="front_body">
+            <div class="navbar_holder">
+                <nav class="navbar">
+                    <ul class="navbar_list">
+                        <li><a href="#front_body" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#upload">Upload</a></li>
+                        <li><a href="#search">Search</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="front_banner_holder"> 
+                
+            <div class="space_bet_ban_name_logo"></div>
+                <div class="logo_name">
+                   
+                </div>
+                <div class="banner_name">    
+                    <div class="name_top">
+                        INTELLIGENT DOCUMENT
+                    </div>
+                    <div class="name_bottom">
+                        FINDER
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- front-body ends -->
+    
+    <!-- middle_body_starts -->
+    <div class="middle_body">
+        <div class="about_container" id="about">
+            <div class="about_text">
+                <p class="about_text_para">
+                    How easy do you find it to remember the exact location of a document that you created last year? Not very easy, right? We deal with hundreds of documents daily and forget about them most of the time.
+                    <br><br>
+                    But what if we want that old documentation again for your work, but unfortunately you do not remember the name or content of that document to retrieve it from the large storage of your computer.
+                    <br><br>
+                    In such cases, we make use of a document finder, which can search for the document of our need based on a query input. This will not only help in faster access to the document, but will also help in grouping similar documents together and in analysing them.
+                </p>
+                <hr class="about_under_line">
+            </div>
+        </div>
+        <p class="our_team_tag"><b>Our</b> Team</p>
+        <div class="team_container">
+            <div class="card">
+                <div class="card_info">
+                    <div class="card_free_space"></div>
+                    <div class="user_image">
+                        <img src="{{url_for('static' , filename = 'sarthak.jpeg')}}" alt="" srcset="">
+                    </div>
+                    <div class="about_user">
+                        <div class="user_name">
+                            Sarthak Jain
+                            <p>
+                                AI - NLP and Computer Vision Enthusiast
+                            </p>
+                        </div>
+                        <div class="user_sites_holder">
+                            <nav class="user_social_sites">
+                                <ul class="user_social_sites_ul">
+                                    <li><a href="/nopage"><img src="{{url_for('static' , filename='icons/facebook.svg')}}" alt="" srcset=""></a></li>
+                                    <li><a href="/nopage"><img src="{{url_for('static' , filename='icons/twitter.svg')}}" alt="" srcset=""></a></li>
+                                    <li><a href="https://linkedin.com/in/sarthak-jain-58b466170"><img src="{{url_for('static' , filename='icons/linkedin.svg')}}" alt="" srcset=""></a></li>
+                                    <li><a href="https://github.com/Sarthakjain1206"><img src="{{url_for('static' , filename='icons/github-image.svg')}}" alt="" srcset=""></a></li>
+                                </ul>  
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="card">
+                <div class="card_info">
+                    <div class="car_free_space"></div>
+                    <div class="user_image">
+                        <img src="{{url_for('static' , filename = 'my_image.jpg')}}" alt="" srcset="">
+                    </div>
+                    <div class="about_user">
+                        <div class="user_name">
+                            Rishabh Mishra
+                            <p>
+                                FULL STACK DEVELOPER
+                            </p>
+                        </div>
+                        <div class="user_sites_holder">
+                            <div class="user_social_sites">
+                               <ul>
+                                <li><a href="/nopage"><img src="{{url_for('static' , filename='icons/facebook.svg')}}" alt="" srcset=""></a></li>
+                                <li><a href="https://twitter.com/r_ishabhmishra"><img src="{{url_for('static' , filename='icons/twitter.svg')}}" alt="" srcset=""></a></li>
+                                <li><a href="https://linkedin.com/in/rishabh-mishra-3a6985167"><img src="{{url_for('static' , filename='icons/linkedin.svg')}}" alt="" srcset=""></a></li>
+                                <li><a href="https://github.com/rishabhm74"><img src="{{url_for('static' , filename='icons/github-image.svg')}}" alt="" srcset=""></a></li>
+                                </ul>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- middle_body_ends -->
+    <div class="space_bet_mid_search"></div>
+    <!-- search_body starts -->
+    <div class="search_body" id="search">
+        <br><br><br><br><br>
+        <div class="search_cards_container">
+            <div class="search_card">
+                <div class="type1_part1">
+                    Enter tags to search
+                </div>
+                <div class="type1_part2_card_1">
+                    <form action="/searchByTag" method="POST"> 
+                        <fieldset class="type1_search_fieldset">
+                            <legend class="type1_search_legend">Tag</legend>
+                                <input id="searchwithtag" class="type1_search" type="text" name="namesearchbytag" placeholder="Eg. Education">
+                                <br>
+                        </fieldset>
+                        <br><br><br>
+                        <div class="type1_part3">
+                            <button type="submit"><a>Search</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="search_card">
+                <div class="type1_part1">
+                    Enter text to search
+                </div>
+                <div class="type1_part2_card_1">
+                    <form action="/searchByText" method="POST"> 
+                        <fieldset class="type1_search_fieldset">
+                            <legend class="type1_search_legend">Text</legend>
+                                <input id="searchwithtext" class="type1_search" type="text" name="namesearchbytext" placeholder="Eg. Narendra Modi">
+                                <br>
+                        </fieldset>
+                        <br><br><br>
+                        <div class="type1_part3">
+                            <button type="submit"><a>Search</a></button>
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+
+            <div class="search_card">
+                <div class="type1_part1">
+                    Enter title to search
+                </div>
+                <div class="type1_part2_card_1">
+                    <form action="/searchByTitle" method="POST"> 
+                        <fieldset class="type1_search_fieldset">
+                            <legend class="type1_search_legend">Text</legend>
+                                <input id="searchwithtext" class="type1_search" type="text" name="namesearchbytitle" placeholder="Eg. Population Explosion">
+                                <br>
+                        </fieldset>
+                        <br><br><br>
+                        <div class="type1_part3">
+                            <button type="submit"><a>Search</a></button>
+                        </div>
+                    </form>
+                </div>
+    
+                <!--<div class="type3_part1">
+                    Select auto-generated tags
+                </div>
+                <div class="type3_part2">
+                    <div class="tag_container">
+                        <div class="tag"><button>Bitcoin</button></div> 
+                        <div class="tag"><button>Stock Market</button></div>
+                        <div class="tag"><button>IT</button></div>
+                        <div class="tag"><button>Corona Virus</button></div>
+                        <div class="tag"><button>Google</button></div>
+                        <div class="tag"><button>Space</button></div>
+                        <div class="tag"><button>Pulwama</button></div>
+                        <div class="tag"><button>Corona Virus</button></div>
+                        <div class="tag"><button>Theranos</button></div>
+                    </div>
+                </div>
+                <div class="type3_part3">
+                    <button><a href="#output">Search</a></button>
+                </div>-->
+    
+            </div>
+        </div>
+
+    </div>
+    <!-- search_body ends -->
+    
+    <!-- output_body starts -->
+
+   
+
+ 
+    <!-- output_body ends -->
+
+    <!-- upload_body starts -->
+    
+    <div class="upload_container_outer" id="upload">
+        <div class="space_bet_ban_name_logo"></div>
+        <br>
+
+        <div class="caution_container">
+            <div class="caution_text">
+                <b>Caution</b> Please enter the working directory path and then continue
+            </div>
+            <form action="/path" method="POST" class="path_upload_form">
+                <input type="text" name="folder_path" placeholder="Upload folder path..." class="upload_path_input" id="upload_path_input">
+                <div class="space"></div>
+                <button type="submit" class="path_submit_button">Upload Path</button>
+            </form>
+            
+        </div>
+
+
+        <div class="upload_container" >
+            <div class="upload_files_container">
+
+                <form class="file_upload_form" method="post" action="/" enctype="multipart/form-data">
+                    <div>
+                        <p>
+                            <input id="file_drop" class="hidden"  type="file" name="files[]" multiple="true" autocomplete="off"  onchange="runner()">
+                            <label class="file_drop_button" for="file_drop">Click here to choose file(s)</label>
+                            <div class="" id="checker" name="checker"></div>
+                        </p>
+                    </div>
+                    
+                    <div class="file_upload_form_submit" id="file_upload_form_submit_hidden">
+                        <input class="_final_file_upload_button" id="final_file_upload_button" type="submit" 
+                        onclick="qwerty_fun()" value="Upload">
+                    </div>
+                </form>
+                <div class="clear_button_container">
+                    <button class="clear_button" id="clear_button" onclick="buffer_clear()">
+                        Remove uploaded files!
+                    </button>
+                </div>
+
+            </div>
+            <div class="view_files_container">
+                <div class="file_list_container" id="file_list_container">
+                    No files uploaded...
+                </div>
+                <div class="total_files_counter" >
+                    <hr>
+                    <div id="total_no_files" class="total_no_files" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- upload body ends -->
+
+    
+    <div class="space_bet_ban_name_logo"></div>
+
+    <!-- footer starts -->
+   <!--   <div class="footer">
+            <div class="footer_1">   </div>
+            <br>
+            <div class="footer_social_media"> 
+                <ul>
+                    <li><a href="#"><img src="{{url_for('static' , filename='icons/facebook (copy)2.svg')}}" alt="" srcset=""></a></li>
+                    <li><a href="#"><img src="{{url_for('static' , filename='icons/twitter (copy)2.svg')}}" alt="" srcset=""></a></li>
+                    <li><a href="#"><img src="{{url_for('static' , filename='icons/linkedin (copy)2.svg')}}" alt="" srcset=""></a></li>
+                    <li><a href="https://github.com/rishabhm74/infenionAIchallenge"><img src="{{url_for('static' , filename='icons/github-image (copy)2.svg')}}" alt="" srcset=""></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    -->
+    <!-- footer ends -->
+
+    </div>
+
+</body>
+
+
+<script>
+
+    var temp_array =[];
+    //document.getElementById('checker').style.display = 'none';
+    document.getElementById('total_no_files').innerHTML = " ";
+    document.getElementById('checker').style.display = "none";
+    var myarray = [];
+
+    function mycheck(){
+        var s = "";
+        var my_temp = document.getElementById('tag_input_values').value;
+        document.getElementById('checker').innerHTML = my_temp;
+        myarray.push(my_temp);
+        for(var i = 0; i < myarray.length ; i++){
+            //s += myarray[i] + " ";
+            console.log(myarray);
+        }
+        
+        // just temp array
+        console.log(temp_array[0]);
+
+       
+    }
+
+    var file_name;
+    function runner(){
+        var fileList = document.getElementById('file_drop').files;
+        if(fileList.length > 1){
+            alert("Not more than one file can be uploaded!!!");
+        }else{
+
+            document.getElementById('file_list_container').innerHTML = "";
+            for(var i = 0 ; i < fileList.length; i++){
+                console.log(fileList[i]);
+                document.getElementById('file_list_container').innerHTML += '<p id="file_list_i">' + fileList[i].name + '</p>' + '\n'  + '<input type="text" placeholder="Enter tags for file..." id="files_tags_upload_entry" class="files_tags_upload_entry" name="files_tags_upload_entry">' +'<label  for="final_file_upload_button" class="final_file_upload_button" onclick="pagedisabler()">Upload</label>' ;
+                file_name = fileList[i].name;
+                console.log(file_name);
+                temp_array.push(file_name); //temp_array holds name of file
+
+        }
+        document.getElementById('total_no_files').innerHTML = "Total number of files: " + fileList.length;
+
+        }
+        function qwerty_fun(){
+            var cv = document.getElementById('tag_input_values').value;
+            console.log(cv);
+        }
+        
+    }
+
+
+
+
+
+    document.getElementById('file_upload_form_submit_hidden').style.display = 'none';
+
+    function buffer_clear(){
+        document.getElementById('file_list_container').innerHTML = "No files uploaded...";
+        document.getElementById('total_no_files').innerHTML = "";
+        document.getElementById('checker').innerHTML = "";
+
+
+
+    }
+
+    function mainfunction(){
+        document.getElementById('searchwithtag').value = " ";
+        document.getElementById('searchwithtext').value = " ";
+    }
+
+
+    function pagedisabler(){
+        document.getElementById('complete_container').style.display = "none";
+        document.getElementById('gif_holder_id').style.display = "block";
+    }
+
+    </script>
+</html>
