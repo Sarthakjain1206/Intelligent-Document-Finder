@@ -25,4 +25,41 @@ __```HTML/CSS```__
 - JavaScript/JQuery
 
 # Program Flow
+<img src="https://github.com/Sarthakjain1206/Intelligent-Document-Finder/blob/master/Flowchart.png" alt="Trulli" width="700" height="500">
+
+# Compatibility
+- Backend (AI part) is compatible on any machine that has python and required dependencies installed.
+- Website is compatible only on Mozilla Firefox and Chrome.
+
+# How to Install and Use?
+
+```mkdir IntelligentDocumentFinder```
+<br>
+<br>
+```cd IntelligentDocumentFinder```
+<br>
+<br>
+```git clone https://github.com/Sarthakjain1206/Intelligent-Document-Finder```
+<br>
+
+Install Vitual Environment if not installed
+<br>
+- On Linux/MacOs
+```python3 -m pip install --user virtualenv```
+- On windows
+```py -m pip install --user virtualenv```
+
+Create Virtual Environment
+- On macOS and Linux:
+```python3 -m venv env```
+- On Windows:
+```py -m venv env```
+
+Activate Environment:
+- On macOS and Linux:
+```source env/bin/activate```
+- On Windows:
+```.\env\Scripts\activate```
+
+```pip install -r requirements.txt```
 
