@@ -33,36 +33,43 @@ __```HTML/CSS```__
 
 # How to Install and Use?
 
-```mkdir IntelligentDocumentFinder```
+```> mkdir IntelligentDocumentFinder```
 <br>
 <br>
-```cd IntelligentDocumentFinder```
+```> cd IntelligentDocumentFinder```
 <br>
 <br>
-```git clone https://github.com/Sarthakjain1206/Intelligent-Document-Finder```
+```> git clone https://github.com/Sarthakjain1206/Intelligent-Document-Finder```
 <br>
 
 Install Vitual Environment if not installed
 <br>
 - On Linux/MacOs
-```python3 -m pip install --user virtualenv```
+```> python3 -m pip install --user virtualenv```
 - On windows
-```py -m pip install --user virtualenv```
+```> py -m pip install --user virtualenv```
 
 Create Virtual Environment
 - On macOS and Linux:
-```python3 -m venv env```
+```> python3 -m venv env```
 - On Windows:
-```py -m venv env```
+```> py -m venv env```
 
 Activate Environment:
 - On macOS and Linux:
-```source env/bin/activate```
+```> source env/bin/activate```
 - On Windows:
-```.\env\Scripts\activate```
+```> .\env\Scripts\activate```
 
-```pip install -r requirements.txt```
+```> pip install -r requirements.txt```
 
-<b>cd</b> to the <b>src</b> folder:
-- On Windows/Linux/MacOS:
-```python app.py```
+__Download Glove Word Embeddings__ from this [link](http://downloads.cs.stanford.edu/nlp/data/glove.6B.zip), decompress it and copy the ```glove.6B.100d``` file in ```DataBase``` folder
+
+then, 
+run initial_file.py through this command
+```> python initial_file.py```
+
+Now you are good to go.. Just type this command everytime you want to access it, and open the website in chrome/firefox
+<br>
+```> python src/app.py```
+
