@@ -32,4 +32,4 @@ load_word_embeddings()
 pickle.dump(word_embeddings,open("word_embeddings.json","wb"))
 print("Word Embeddings has been extracted, and saved to word_embeddings.json file..")
 
-print("completed")
+
