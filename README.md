@@ -63,6 +63,6 @@ Activate Environment:
 
 ```pip install -r requirements.txt```
 
-cd to the src folder:
-- on Windows/Linux/MacOS:
+<b>cd</b> to the <b>src</b> folder:
+- On Windows/Linux/MacOS:
 ```python app.py```
