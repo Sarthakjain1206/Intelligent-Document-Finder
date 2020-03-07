@@ -6,7 +6,7 @@ How easy do you find it to remember the exact location of a document that you cr
 <br>
 But what if we want that old documentation again for some work, but unfortunately you do not remember the name or the actual content of that document to retrieve it from the large storage of your computer.
 <br>
-In such cases, use of a __Intelligent document finder__ can really make a huge difference. As, it can Search for the document(```sematically```) of your need based on a query input. This will not only help in faster access to the document, but will also help in grouping similar documents together and in analysing them.
+In such cases, use of a __Intelligent document finder__ can really make a huge difference. As, it can Search for the document(```semantically```) of your need based on a query input. This will not only help in faster access to the document, but will also help in grouping similar documents together and in analysing them.
 <br>
 # Technologies Used
 **```Python3.6```**
@@ -29,7 +29,7 @@ __```HTML/CSS```__
 
 # Compatibility
 - Backend (AI part) is compatible on any machine that has python and required dependencies installed.
-- Website is compatible only on Mozilla Firefox and Chrome.
+- Recommended browsers: Mozilla Firefox and Google Chrome.
 
 # How to Install and Use?
 
@@ -63,3 +63,6 @@ Activate Environment:
 
 ```pip install -r requirements.txt```
 
+cd to the src folder:
+- on Windows/Linux/MacOS:
+```python app.py```
