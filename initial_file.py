@@ -1,0 +1,11 @@
+import nltk
+nltk.download('punkt')
+nltk.download('words')
+nltk.download('wordnet')
+nltk.download('chunk')
+nltk.download('corpus')
+nltk.download('brown')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('treebank')
+nltk.download('conll2000')
