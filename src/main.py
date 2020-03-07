@@ -75,7 +75,7 @@ def main(file_upload, title):
     # load_word_embeddings()
     # print('loaded')
     global word_embeddings
-    word_embeddings = pickle.load(open(r"DataBase\word_embeddings.json", "rb"))
+    word_embeddings = pickle.load(open(r"word_embeddings.json", "rb"))
     # file_upload = r"C:\Users\Asus\PycharmProjects\Intelligent_Document_Finder\Data\Population Explosion.docx"
     # file_upload = r"saru.docx"
 
