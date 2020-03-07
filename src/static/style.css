@@ -2,27 +2,25 @@ body{
     margin: 0;
     border: 0;
     height: auto;
-    background-color: #f9f9f9; /*f9f9f9 */
-    border-bottom: 10vh solid #1C272B;
+    background-color: #f9f9f9; 
+    border-bottom: 7vh solid #1C272B;
 }
-/*  * {border: 1px solid red;} */
 
 /* front_body starts */
 .front_body{
     height: 100vh;
     width: 100%;
-    background-color: #EFDD38; /* EFDD38 */
+    background-color: #EFDD38; 
 }
 /* navbar_holder starts */
 .navbar_holder{
-    background-color: #F3D537;  /* F3D537 */
+    background-color: #F3D537;  
     height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-   /* border-bottom: 0.5px solid #e6c832; /* e6c832*/
     box-shadow: 0px 0px 5px #cfb42d;
 }
 
@@ -225,12 +223,12 @@ body{
     display: grid;
     float: ;
     align-items: center;
-    justify-content: center; /* this part */
+    justify-content: center; 
 }
 
 .user_social_sites{
     height: 100%;
-    width: 22vw; /* this part */
+    width: 22vw;
     margin: 0 auto;
 }
 
@@ -267,7 +265,6 @@ body{
 .search_body{
     height: 110vh;
     width: 100%;
-  /*   background-color: #EFDD38; */
     background-image:  linear-gradient(to bottom right, #ffa41b,  #EFDD38);
 }
 
@@ -277,15 +274,15 @@ body{
     background-color: #f9f9f9;
     border-radius: 0.4rem;
     margin: 0 auto;
-    box-shadow: 0px 0px 15px #e4aa2d;  /* cebd21 */
+    box-shadow: 0px 0px 15px #e4aa2d; 
     display: grid;
-    grid-template-rows: 20% 45% ; /* 20 40 5*/
+    grid-template-rows: 20% 45% ; 
     place-content: center;
 }
 .search_card:hover{
     height: 81vh;
     width: 93%;
-    box-shadow: 0px 0px 18px #ce9823;  /* ccba1c*/
+    box-shadow: 0px 0px 18px #ce9823; 
     transition: 0.2s;
 }
 
@@ -476,9 +473,7 @@ body{
 .output_external_container{
     height: auto;
     width: 100%;
-    margin: 6vh 0vw;
-    
-    
+    margin: 6vh 0vw;   
 }
 
 .output_container{
@@ -496,7 +491,8 @@ body{
     justify-content: center;
     margin-top: 2vh;
 }
-.output{
+.output
+{
     width: 80%;
     height: auto;
     background-color: #f7f7f7;
@@ -509,7 +505,6 @@ body{
 }
 .output:hover{
     transition: 0.3s;
-  /*  box-shadow: 0px 0px 12px #e9e9e9;  */
 }
 .text{
     display: grid;
@@ -568,7 +563,7 @@ body{
     width: 70%;
     margin: 0 auto;
     background-color: #ffe3e373;
-    border: 1.5px solid #ff6868; /*ff8c8c*/
+    border: 1.5px solid #ff6868; 
     padding: 2vh 0vw;
     border-radius: 0.3rem;
 
@@ -664,18 +659,18 @@ body{
 }
 .file_drop_button{
     text-align: center;
-    border: 0.5px solid #44c036; /*e7e7e7*/
+    border: 0.5px solid #44c036; 
     padding: 2vh 2vw;
     border-radius: 0.2rem;
     width: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.4vh;
-    color: #646464; /*3f3f3f*/
-    background-color: #a7eba159; /*f0f0f0*/ 
+    color: #646464; 
+    background-color: #a7eba159; 
     font-weight: 500;
 }
 .file_drop_button:hover{
-    background-color: #0cbe429f; /*e6e6e6*/
+    background-color: #0cbe429f; 
     border: 0.5px solid #36a529;
     color: #ffffff;
     transition: 0.3s;
@@ -705,7 +700,7 @@ body{
 .clear_button{
     border: none;
     background-color: #ffe3e393;
-    border: 1.5px solid #ff3a3a; /*ff8c8c*/
+    border: 1.5px solid #ff3a3a; 
     color: #ff3a3a;
     border-radius: 0.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -771,9 +766,7 @@ body{
 .footer{
     height: 70vh;
     width: 100%;
-    background-color: #1C272B;
-                                /* changes */
-    
+    background-color: #1C272B;   
 }
 .footer_1{
     height: 50vh;
