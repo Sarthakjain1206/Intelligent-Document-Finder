@@ -76,9 +76,7 @@ def main(file_upload, title):
     # print('loaded')
     global word_embeddings
     word_embeddings = pickle.load(open(r"word_embeddings.json", "rb"))
-    # file_upload = r"C:\Users\Asus\PycharmProjects\Intelligent_Document_Finder\Data\Population Explosion.docx"
-    # file_upload = r"saru.docx"
-
+    
     preprocess_obj = PreProcess(file_upload)
 
     if preprocess_obj.check_extension():
@@ -88,7 +86,7 @@ def main(file_upload, title):
         if extension == 'docx':
             text = preprocess_obj.get_text_from_docx_document()
             text = preprocess_obj.remove_escape_sequences(text)
-            print('I m in')
+            
         elif extension == 'pptx':
             text = preprocess_obj.get_text_from_pptx_document()
             text = preprocess_obj.remove_escape_sequences(text)
