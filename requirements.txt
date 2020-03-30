@@ -22,7 +22,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.1
 jmespath==0.9.4
 joblib==0.14.1
-js==1.0
 kiwisolver==1.1.0
 lxml==4.5.0
 MarkupSafe==1.1.1
@@ -36,7 +35,6 @@ pandas==1.0.0
 pdfminer.six==20181108
 Pillow==7.0.0
 pycryptodome==3.9.6
-pymongo==3.10.1
 pyparsing==2.4.6
 PyPDF2==1.26.0
 pyspellchecker==0.5.3
@@ -54,7 +52,6 @@ sklearn==0.0
 smart-open==1.9.0
 sortedcontainers==2.1.0
 soupsieve==1.9.5
-SpeechRecognition==3.8.1
 textract==1.6.3
 tzlocal==1.5.1
 urllib3==1.25.8
