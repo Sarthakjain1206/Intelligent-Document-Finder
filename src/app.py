@@ -70,7 +70,7 @@ def clean_query(query):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'apna time aaega'
+app.config['SECRET_KEY'] = 'Hard to guess string'
 
 
 app.config['MAX_CONTENT_LENGTH	'] = 1024 * 1024 * 1024
