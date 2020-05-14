@@ -92,12 +92,12 @@ def viewSearchbyTag():
         mystring = "Tag"
         query = request.form['namesearchbytag']
 
-        data = pickle.load(open(r"DataBase\data_file.pkl", "rb"))
-        titles = pickle.load(open(r"DataBase\title_file.pkl", "rb"))
-        auto_tag = pickle.load(open(r"DataBase\svos_file.pkl", "rb"))
-        summary = pickle.load(open(r"DataBase\summary_file.pkl", "rb"))
+        data = pickle.load(open(r"DataBase/data_file.pkl", "rb"))
+        titles = pickle.load(open(r"DataBase/title_file.pkl", "rb"))
+        auto_tag = pickle.load(open(r"DataBase/svos_file.pkl", "rb"))
+        summary = pickle.load(open(r"DataBase/summary_file.pkl", "rb"))
 
-        corpus = pickle.load(open(r"DataBase\tags_pickle.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/tags_pickle.pkl", "rb"))
         bm25 = search_by_BM25(corpus)
 
         tokenized_query, old_query, new_query = clean_query(query.lower())
@@ -128,7 +128,7 @@ def viewSearchbyTag():
 
         title_len = len(title)
 
-        document_file = pickle.load(open(r"DataBase\document_file.pkl", "rb"))
+        document_file = pickle.load(open(r"DataBase/document_file.pkl", "rb"))
         extension_list = []
         for i in indexes:
             extension_list.append(document_file[i]["extension"])
@@ -145,12 +145,12 @@ def viewSearchbyText():
         mystring = "Text"
         query = request.form['namesearchbytext']
 
-        data = pickle.load(open(r"DataBase\data_file.pkl", "rb"))
-        titles = pickle.load(open(r"DataBase\title_file.pkl", "rb"))
-        auto_tag = pickle.load(open(r"DataBase\svos_file.pkl", "rb"))
-        summary = pickle.load(open(r"DataBase\summary_file.pkl", "rb"))
+        data = pickle.load(open(r"DataBase/data_file.pkl", "rb"))
+        titles = pickle.load(open(r"DataBase/title_file.pkl", "rb"))
+        auto_tag = pickle.load(open(r"DataBase/svos_file.pkl", "rb"))
+        summary = pickle.load(open(r"DataBase/summary_file.pkl", "rb"))
 
-        corpus = pickle.load(open(r"DataBase\corpus_file.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/corpus_file.pkl", "rb"))
         bm25 = search_by_BM25(corpus)
 
         tokenized_query, old_query, new_query = clean_query(query.lower())
@@ -181,7 +181,7 @@ def viewSearchbyText():
 
         title_len = len(title)
 
-        document_file = pickle.load(open(r"DataBase\document_file.pkl", "rb"))
+        document_file = pickle.load(open(r"DataBase/document_file.pkl", "rb"))
         extension_list = []
         for i in indexes:
             extension_list.append(document_file[i]["extension"])
@@ -196,12 +196,12 @@ def viewSearchbyTitle():
     if request.method == 'POST':
         mystring = "Title"
         query = request.form['namesearchbytitle']
-        data = pickle.load(open(r"DataBase\data_file.pkl", "rb"))
-        titles = pickle.load(open(r"DataBase\title_file.pkl", "rb"))
-        auto_tag = pickle.load(open(r"DataBase\svos_file.pkl", "rb"))
-        summary = pickle.load(open(r"DataBase\summary_file.pkl", "rb"))
+        data = pickle.load(open(r"DataBase/data_file.pkl", "rb"))
+        titles = pickle.load(open(r"DataBase/title_file.pkl", "rb"))
+        auto_tag = pickle.load(open(r"DataBase/svos_file.pkl", "rb"))
+        summary = pickle.load(open(r"DataBase/summary_file.pkl", "rb"))
 
-        corpus = pickle.load(open(r"DataBase\title_corpus.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/title_corpus.pkl", "rb"))
         bm25 = search_by_BM25(corpus)
 
         tokenized_query, old_query, new_query = clean_query(query.lower())
@@ -233,7 +233,7 @@ def viewSearchbyTitle():
 
         title_len = len(title)
 
-        document_file = pickle.load(open(r"DataBase\document_file.pkl", "rb"))
+        document_file = pickle.load(open(r"DataBase/document_file.pkl", "rb"))
         extension_list = []
         for i in indexes:
             extension_list.append(document_file[i]["extension"])
@@ -310,13 +310,13 @@ def filenameonclick():
 
             myclassname = request.form['myclassname']
             print(myclassname)
-            titles = pickle.load(open(r"DataBase\title_file.pkl", "rb"))
+            titles = pickle.load(open(r"DataBase/title_file.pkl", "rb"))
             for i in range(len(titles)):
                 if titles[i] == myclassname:
                     index = i
                     break
 
-            document_file = pickle.load(open(r"DataBase\document_file.pkl", "rb"))
+            document_file = pickle.load(open(r"DataBase/document_file.pkl", "rb"))
 
             blob_data = document_file[index]["document"]
             extension = document_file[index]["extension"]

@@ -18,7 +18,7 @@ def convertToBinaryData(file):
 
 def insert_data_to_database(doc_id, title, text, file, extension, summary, auto_tags, manual_tags, svos):
     try:
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
 
         sqlite_insert_blob_query1 = """ INSERT INTO document_info
@@ -61,7 +61,7 @@ def insert_data_to_database(doc_id, title, text, file, extension, summary, auto_
 
 def get_last_inserted_rowid():
     try:
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute('''SELECT MAX(rowid) FROM document_info''')
         tup = c.fetchone()
@@ -130,5 +130,4 @@ def main(file_upload, title):
 
 # main()
 
-# I have inserted news_6000.txt data in database---------> running ready_for_search.py script is still left
 

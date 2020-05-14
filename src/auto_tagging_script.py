@@ -1,3 +1,5 @@
+# this file include source code of this beautiful repositry --> https://github.com/acrosson/nlp/tree/master/subject_extraction
+
 import warnings
 warnings.filterwarnings('ignore')
 import os
@@ -95,25 +97,25 @@ class AutoTags:
             return ""
 
 
-    def trained_tagger(self,existing=False):
-        """Returns a trained trigram tagger
-        existing : set to True if already trained tagger has been pickled
-        """
-        if existing:
-            trigram_tagger = pickle.load(
-                open(r'C:\Users\Asus\Documents\NLP_nanodegree\My_practice\trained_tagger.pkl', 'rb'))
-            return trigram_tagger
+    # def trained_tagger(self,existing=False):
+    #     """Returns a trained trigram tagger
+    #     existing : set to True if already trained tagger has been pickled
+    #     """
+    #     if existing:
+            # trigram_tagger = pickle.load(
+            #     open(r'DataBase/trained_tagger.pkl', 'rb'))
+            # return trigram_tagger
 
-        # Aggregate trained sentences for N-Gram Taggers
-        train_sents = nltk.corpus.brown.tagged_sents()
-        train_sents += nltk.corpus.conll2000.tagged_sents()
-        train_sents += nltk.corpus.treebank.tagged_sents()
+    #     # Aggregate trained sentences for N-Gram Taggers
+    #     train_sents = nltk.corpus.brown.tagged_sents()
+    #     train_sents += nltk.corpus.conll2000.tagged_sents()
+    #     train_sents += nltk.corpus.treebank.tagged_sents()
 
-        # Create instance of SubjectTrigramTagger and persist instance of it
-        trigram_tagger = SubjectTrigramTagger(train_sents)
-        pickle.dump(trigram_tagger, open('trained_tagger.pkl', 'wb'))
+    #     # Create instance of SubjectTrigramTagger and persist instance of it
+    #     trigram_tagger = SubjectTrigramTagger(train_sents)
+    #     pickle.dump(trigram_tagger, open(r'DataBase/trained_tagger.pkl', 'wb'))
 
-        return trigram_tagger
+    #     return trigram_tagger
 
     def merge_multi_word_subject(self, sentences, subject):
         """Merges multi word subjects into one single token
@@ -136,7 +138,7 @@ class AutoTags:
 
     def tag_sentences(self, subject, document):
         """Returns tagged sentences using POS tagging"""
-        trigram_tagger = self.trained_tagger(existing=True)
+        trigram_tagger = pickle.load(open(r'DataBase/trained_tagger.pkl', 'rb'))
 
         # Tokenize Sentences and words
         sentences = self.tokenize_sentences(document)

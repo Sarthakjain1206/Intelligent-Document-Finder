@@ -106,7 +106,7 @@ class PreProcess:
 def load_word_embeddings():
     global word_embeddings
     word_embeddings = {}
-    f = open(r'\DataBase\glove.6B.100d.txt', encoding="utf-8")
+    f = open(r'DataBase/glove.6B.100d.txt', encoding="utf-8")
     for line in f:
         values = line.split()
         word = values[0]

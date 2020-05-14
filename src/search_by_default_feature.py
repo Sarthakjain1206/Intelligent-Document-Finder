@@ -40,19 +40,19 @@ def clean_query(query):
         return lemmed
 
 if __name__ == '__main__':
-    data = pickle.load(open(r"DataBase\data_file.pkl", "rb"))
-    titles = pickle.load(open(r"DataBase\title_file.pkl", "rb"))
+    data = pickle.load(open(r"DataBase/data_file.pkl", "rb"))
+    titles = pickle.load(open(r"DataBase/title_file.pkl", "rb"))
 
     option = input("Enter option of search")
 
     if option == 'default search':
-        corpus = pickle.load(open(r"DataBase\corpus_file.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/corpus_file.pkl", "rb"))
     elif option == 'tag search':
-        corpus = pickle.load(open(r"DataBase\tags_pickle.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/tags_pickle.pkl", "rb"))
     elif option == 'title search':
-        corpus = pickle.load(open(r"DataBase\title_corpus.pkl", "rb"))
+        corpus = pickle.load(open(r"DataBase/title_corpus.pkl", "rb"))
     else:
-        print('Npt valid option')
+        print('Not valid option')
 
     bm25 = search_by_BM25(corpus)
     query = input("Enter query")

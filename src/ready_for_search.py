@@ -12,7 +12,7 @@ class MakeDataForSearch:
         self.data, self.titles, self.summaries, self.documents, self.svos = self.get_all_texts_summary_titles_documents()
 
     def fetch_all_texts(self):
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute("SELECT text from document_info")
         tup = c.fetchall()
@@ -20,28 +20,28 @@ class MakeDataForSearch:
         return tup
 
     def fetch_all_titles(self):
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute("SELECT title from document_info")
         tup = c.fetchall()
         conn.close()
         return tup
     def fetch_all_summary(self):
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute("SELECT summary from document_summary")
         tup = c.fetchall()
         conn.close()
         return tup
     def fetch_all_svos(self):
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute("SELECT auto_tags from document_tags")
         tup = c.fetchall()
         conn.close()
         return tup
     def fetch_all_documentsWithExtensions(self):
-        conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+        conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
         c = conn.cursor()
         c.execute("SELECT document,extension from document_info")
         tup = c.fetchall()
@@ -95,7 +95,7 @@ def get_corpus(text):
 
 
 def get_latest_text_title():
-    conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+    conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
     c = conn.cursor()
     c.execute("SELECT title,text from document_info where rowid = (SELECT MAX(rowid) FROM document_info)")
     tup = c.fetchall()
@@ -103,7 +103,7 @@ def get_latest_text_title():
     return tup
 
 def get_latest_tags():
-    conn = sqlite3.connect(r"DataBase\Document_finder_db2.db")
+    conn = sqlite3.connect(r"DataBase/Document_finder_db2.db")
     c = conn.cursor()
     c.execute("SELECT manual_tags,auto_tags from document_tags where rowid = (SELECT MAX(rowid) FROM document_tags)")
     tup = c.fetchone()
@@ -126,26 +126,26 @@ def maintaining_all_files():
     svos = []
     obj = MakeDataForSearch(data, titles, summaries, documents, svos)
 
-    pickle.dump(obj.data, open(r"DataBase\data_file.pkl", "wb"))
-    pickle.dump(obj.titles, open(r"DataBase\title_file.pkl", "wb"))
-    pickle.dump(obj.summaries, open(r"DataBase\summary_file.pkl", "wb"))
-    pickle.dump(obj.documents, open(r"DataBase\document_file.pkl", "wb"))
-    pickle.dump(obj.svos, open(r"DataBase\svos_file.pkl", "wb"))
+    pickle.dump(obj.data, open(r"DataBase/data_file.pkl", "wb"))
+    pickle.dump(obj.titles, open(r"DataBase/title_file.pkl", "wb"))
+    pickle.dump(obj.summaries, open(r"DataBase/summary_file.pkl", "wb"))
+    pickle.dump(obj.documents, open(r"DataBase/document_file.pkl", "wb"))
+    pickle.dump(obj.svos, open(r"DataBase/svos_file.pkl", "wb"))
 
     print("Files is updated")
 
     # appending to the main corpus
-    corpus = pickle.load(open(r"DataBase\corpus_file.pkl", "rb"))
+    corpus = pickle.load(open(r"DataBase/corpus_file.pkl", "rb"))
 
     temp = get_latest_text_title()
     text = temp[0][1]
     title = temp[0][0]
     corpus.append(get_corpus(text)+get_corpus(title))
 
-    pickle.dump(corpus, open(r"DataBase\corpus_file.pkl", "wb"))
+    pickle.dump(corpus, open(r"DataBase/corpus_file.pkl", "wb"))
 
     # appending to the tags corpus
-    final_auto_tags = pickle.load(open(r"DataBase\tags_pickle.pkl", "rb"))
+    final_auto_tags = pickle.load(open(r"DataBase/tags_pickle.pkl", "rb"))
 
     tup = get_latest_tags()
     temp_auto_tags = tup[1][1:-1].split("'")
@@ -156,13 +156,13 @@ def maintaining_all_files():
 
     final_auto_tags.append(auto_tags)
 
-    pickle.dump(final_auto_tags, open(r"DataBase\tags_pickle.pkl", "wb"))
+    pickle.dump(final_auto_tags, open(r"DataBase/tags_pickle.pkl", "wb"))
 
     # appending to title corpus
-    title_corpus = pickle.load(open(r"DataBase\title_corpus.pkl", "rb"))
+    title_corpus = pickle.load(open(r"DataBase/title_corpus.pkl", "rb"))
     title_corpus.append(get_corpus(title))
 
-    pickle.dump(title_corpus, open(r"DataBase\title_corpus.pkl", "wb"))
+    pickle.dump(title_corpus, open(r"DataBase/title_corpus.pkl", "wb"))
 
 
     print("corpus is updated")
