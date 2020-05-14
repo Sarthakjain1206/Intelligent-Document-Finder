@@ -8,6 +8,11 @@ But what if we want that old documentation again for some work, but unfortunatel
 <br>
 In such cases, use of a __Intelligent document finder__ can really make a huge difference. As, it can Search for the document(```semantically```) of your need based on a query input. This will not only help in faster access to the document, but will also help in grouping similar documents together and in analysing them.
 <br>
+# Note: 
+Currently this repositry is using predefined database of news articles gathered by web scraping. Due to the github restrictions on uploading the large files, we cannot upload it here. 
+<br><br>
+Soon, we will add the support of the dynamic databases, so that you can use this tool for your own databases to build your own custom search engine.
+<br>
 # Technologies Used
 **```Python3.6```**
 __```JavaScript```__
