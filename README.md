@@ -1,5 +1,7 @@
-# Intelligent-Document-Finder
-A tool which can find your any document using **semantic search**
+# Intelligent-Document-Finder(old)
+A tool which can find your any document using **semantic search**<br>
+New Version - https://github.com/Sarthakjain1206/Intelligent_Document_Finder
+<br>
 
 # What is Intelligent Document Finder ?
 How easy do you find it to remember the exact location of a document that you created last year? Not very easy, right? Big Organizations/people deal with hundreds of documents daily and forget about them, most of the time.
